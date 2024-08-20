@@ -1,0 +1,22 @@
+D:\ABC_Car_Traders\ABC Car Traders\ABC Car Traders\obj\Debug\ABC Car Traders.csproj.AssemblyReference.cache
+D:\ABC_Car_Traders\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.Login.resources
+D:\ABC_Car_Traders\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.Properties.Resources.resources
+D:\ABC_Car_Traders\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.Signup.resources
+D:\ABC_Car_Traders\ABC Car Traders\ABC Car Traders\obj\Debug\ABC Car Traders.csproj.GenerateResource.cache
+D:\ABC_Car_Traders\ABC Car Traders\ABC Car Traders\obj\Debug\ABC Car Traders.csproj.CoreCompileInputs.cache
+D:\ABC_Car_Traders\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.Admin_Dashboard.resources
+D:\ABC_Car_Traders\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.Customer_Dashboard.resources
+D:\ABC_Car_Traders\ABC Car Traders\ABC Car Traders\bin\Debug\ABC Car Traders.exe.config
+D:\ABC_Car_Traders\ABC Car Traders\ABC Car Traders\bin\Debug\ABC Car Traders.exe
+D:\ABC_Car_Traders\ABC Car Traders\ABC Car Traders\bin\Debug\ABC Car Traders.pdb
+D:\ABC_Car_Traders\ABC Car Traders\ABC Car Traders\obj\Debug\ABC Car Traders.exe
+D:\ABC_Car_Traders\ABC Car Traders\ABC Car Traders\obj\Debug\ABC Car Traders.pdb
+D:\ABC_Car_Traders\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.Car_Management.resources
+D:\ABC_Car_Traders\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.Car_Orders_Admin.resources
+D:\ABC_Car_Traders\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.Car_Parts_Orders_Admin.resources
+D:\ABC_Car_Traders\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.Customer_Management.resources
+D:\ABC_Car_Traders\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.Manage_Car_Parts.resources
+D:\ABC_Car_Traders\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.Reports_Admin.resources
+D:\ABC_Car_Traders\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.Car_Parts_User.resources
+D:\ABC_Car_Traders\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.Car_User.resources
+D:\ABC_Car_Traders\ABC Car Traders\ABC Car Traders\obj\Debug\ABC_Car_Traders.Orders_User.resources

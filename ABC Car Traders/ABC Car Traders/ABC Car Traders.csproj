@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C942FB21-F318-40B3-A1DE-735F816CE8DD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ABC_Car_Traders</RootNamespace>
+    <AssemblyName>ABC Car Traders</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Dashboard.Designer.cs">
+      <DependentUpon>Admin_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Car_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Car_Management.Designer.cs">
+      <DependentUpon>Car_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Car_Orders_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Car_Orders_Admin.Designer.cs">
+      <DependentUpon>Car_Orders_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Car_Parts_Orders_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Car_Parts_Orders_Admin.Designer.cs">
+      <DependentUpon>Car_Parts_Orders_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Car_Parts_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Car_Parts_User.Designer.cs">
+      <DependentUpon>Car_Parts_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Car_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Car_User.Designer.cs">
+      <DependentUpon>Car_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer_Dashboard.Designer.cs">
+      <DependentUpon>Customer_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer_Management.Designer.cs">
+      <DependentUpon>Customer_Management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_Car_Parts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_Car_Parts.Designer.cs">
+      <DependentUpon>Manage_Car_Parts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders_User.Designer.cs">
+      <DependentUpon>Orders_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports_Admin.Designer.cs">
+      <DependentUpon>Reports_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Signup.Designer.cs">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin_Dashboard.resx">
+      <DependentUpon>Admin_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Car_Management.resx">
+      <DependentUpon>Car_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Car_Orders_Admin.resx">
+      <DependentUpon>Car_Orders_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Car_Parts_Orders_Admin.resx">
+      <DependentUpon>Car_Parts_Orders_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Car_Parts_User.resx">
+      <DependentUpon>Car_Parts_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Car_User.resx">
+      <DependentUpon>Car_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer_Dashboard.resx">
+      <DependentUpon>Customer_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer_Management.resx">
+      <DependentUpon>Customer_Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_Car_Parts.resx">
+      <DependentUpon>Manage_Car_Parts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders_User.resx">
+      <DependentUpon>Orders_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports_Admin.resx">
+      <DependentUpon>Reports_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Signup.resx">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33308.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\55205.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8333044.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abc car traders %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car-wash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-computer-icons-icon-design-order-icon-cdr-angle-thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switch.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
