@@ -45,8 +45,15 @@ namespace ABC_Car_Traders
             this.btnExit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.CarOrdersPanel = new System.Windows.Forms.Panel();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.CarOrders1 = new ABC_Car_Traders.CarOrders();
+            this.btnCarOrdersPa = new System.Windows.Forms.Button();
+            this.btnCarPartOrdersPa = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.CarOrdersPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnReports
@@ -224,12 +231,78 @@ namespace ABC_Car_Traders
             this.label2.TabIndex = 1;
             this.label2.Text = "ADMIN - REPORTS";
             // 
+            // CarOrdersPanel
+            // 
+            this.CarOrdersPanel.Controls.Add(this.crystalReportViewer1);
+            this.CarOrdersPanel.Location = new System.Drawing.Point(269, 78);
+            this.CarOrdersPanel.Name = "CarOrdersPanel";
+            this.CarOrdersPanel.Size = new System.Drawing.Size(913, 707);
+            this.CarOrdersPanel.TabIndex = 155;
+            // 
+            // crystalReportViewer1
+            // 
+            this.crystalReportViewer1.ActiveViewIndex = 0;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.ReportSource = this.CarOrders1;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(913, 707);
+            this.crystalReportViewer1.TabIndex = 0;
+            // 
+            // btnCarOrdersPa
+            // 
+            this.btnCarOrdersPa.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnCarOrdersPa.FlatAppearance.BorderSize = 0;
+            this.btnCarOrdersPa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCarOrdersPa.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCarOrdersPa.Location = new System.Drawing.Point(460, 46);
+            this.btnCarOrdersPa.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCarOrdersPa.Name = "btnCarOrdersPa";
+            this.btnCarOrdersPa.Size = new System.Drawing.Size(183, 27);
+            this.btnCarOrdersPa.TabIndex = 113;
+            this.btnCarOrdersPa.Text = "Car Orders";
+            this.btnCarOrdersPa.UseVisualStyleBackColor = false;
+            // 
+            // btnCarPartOrdersPa
+            // 
+            this.btnCarPartOrdersPa.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnCarPartOrdersPa.FlatAppearance.BorderSize = 0;
+            this.btnCarPartOrdersPa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCarPartOrdersPa.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCarPartOrdersPa.Location = new System.Drawing.Point(643, 46);
+            this.btnCarPartOrdersPa.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCarPartOrdersPa.Name = "btnCarPartOrdersPa";
+            this.btnCarPartOrdersPa.Size = new System.Drawing.Size(183, 27);
+            this.btnCarPartOrdersPa.TabIndex = 156;
+            this.btnCarPartOrdersPa.Text = "Car Part Orders";
+            this.btnCarPartOrdersPa.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Goldenrod;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(826, 46);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(183, 27);
+            this.button2.TabIndex = 157;
+            this.button2.Text = "Order";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // Reports_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1183, 788);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnCarPartOrdersPa);
+            this.Controls.Add(this.btnCarOrdersPa);
+            this.Controls.Add(this.CarOrdersPanel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -242,6 +315,7 @@ namespace ABC_Car_Traders
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.CarOrdersPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -260,5 +334,11 @@ namespace ABC_Car_Traders
         private Button btnExit;
         private Panel panel1;
         private Label label2;
+        private Panel CarOrdersPanel;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private CarOrders CarOrders1;
+        private Button btnCarOrdersPa;
+        private Button btnCarPartOrdersPa;
+        private Button button2;
     }
 }

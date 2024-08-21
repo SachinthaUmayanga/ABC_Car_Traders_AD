@@ -94,5 +94,10 @@ namespace ABC_Car_Traders
             frm.Show();
             this.Hide();
         }
+
+        private void RP11_InitReport(object sender, EventArgs e)
+        {
+
+        }
     }
 }
