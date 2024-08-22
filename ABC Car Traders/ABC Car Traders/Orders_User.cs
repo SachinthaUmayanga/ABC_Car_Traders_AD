@@ -393,7 +393,61 @@ namespace ABC_Car_Traders
 
         private void btnPay_Click(object sender, EventArgs e)
         {
+            decimal totPrice;
+            if (decimal.TryParse(lblGrandTotal.Text, out totPrice) && totPrice > 0)
+            {
+                DialogResult result = MessageBox.Show($"Your total price is {totPrice:F2}. Do you want to proceed with the payment?", "Confirm Payment", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    string paymentQuery = "INSERT INTO Payments (username, GrandTotal, PaymentDate) VALUES (@username, @GrandTotal, @PaymentDate); SELECT SCOPE_IDENTITY();";
+                    string updateCarOrderQuery = "UPDATE CarOrders SET Payment = 'Paid', PaidDate = @PaymentDate WHERE username = @username AND Payment = 'Pending' AND DeletedDate is NULL";
+                    string updateCarPartOrderQuery = "UPDATE CarPartOrders SET Payment = 'Paid', PaidDate = @PaymentDate WHERE username = @username AND Payment = 'Pending' AND DeletedDate is NULL";
 
+                    using (SqlConnection conn = new SqlConnection(connectionString))
+                    {
+                        SqlCommand paymentCmd = new SqlCommand(paymentQuery, conn);
+                        SqlCommand updateCarOrderCmd = new SqlCommand(updateCarOrderQuery, conn);
+                        SqlCommand updateCarPartOrderCmd = new SqlCommand(updateCarPartOrderQuery, conn);
+
+                        // Set parameters for the payment
+                        paymentCmd.Parameters.AddWithValue("@username", _username);
+                        paymentCmd.Parameters.AddWithValue("@GrandTotal", totPrice);
+                        paymentCmd.Parameters.AddWithValue("@PaymentDate", DateTime.Now);
+
+                        // Set parameters for updating the car orders
+                        updateCarOrderCmd.Parameters.AddWithValue("@username", _username);
+                        updateCarOrderCmd.Parameters.AddWithValue("@PaymentDate", DateTime.Now);
+
+                        // Set parameters for updating the car part orders
+                        updateCarPartOrderCmd.Parameters.AddWithValue("@username", _username);
+                        updateCarPartOrderCmd.Parameters.AddWithValue("@PaymentDate", DateTime.Now);
+
+                        try
+                        {
+                            conn.Open();
+
+                            // Execute payment command
+                            int paymentID = Convert.ToInt32(paymentCmd.ExecuteScalar());
+
+                            // Update car orders and car part orders
+                            updateCarOrderCmd.ExecuteNonQuery();
+                            updateCarPartOrderCmd.ExecuteNonQuery();
+
+                            MessageBox.Show($"Payment of {totPrice:F2} was successful! Your payment ID is {paymentID}.", "Payment Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            ClearForm();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("There are no pending orders to pay for.", "No Orders", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

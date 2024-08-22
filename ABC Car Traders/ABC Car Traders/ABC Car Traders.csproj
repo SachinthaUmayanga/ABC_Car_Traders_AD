@@ -64,6 +64,12 @@
       <DependentUpon>CarOrders.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CarPartOrders.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarPartOrders.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Car_Management.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,12 @@
     <Compile Include="Orders_User.Designer.cs">
       <DependentUpon>Orders_User.cs</DependentUpon>
     </Compile>
+    <Compile Include="Payment.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Payment.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reports_Admin.cs">
@@ -144,6 +156,10 @@
     <EmbeddedResource Include="CarOrders.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CarOrders.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarPartOrders.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CarPartOrders.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Car_Management.resx">
       <DependentUpon>Car_Management.cs</DependentUpon>
@@ -174,6 +190,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Orders_User.resx">
       <DependentUpon>Orders_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Payment.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

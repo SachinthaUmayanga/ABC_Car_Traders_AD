@@ -99,5 +99,57 @@ namespace ABC_Car_Traders
         {
 
         }
+
+        private void btnCarOrdersPa_Click(object sender, EventArgs e)
+        {
+            //show carorders panel and hide others
+            CarOrdersPanel.Visible = true;
+            CarPartOrdersPanel.Visible = false;
+            PaymentPanel.Visible = false;
+
+            //Change button colors
+            btnCarOrdersPa.BackColor = Color.DarkGoldenrod;
+            btnCarPartOrdersPa.BackColor = Color.Goldenrod;
+            btnPaymentPa.BackColor = Color.Goldenrod;
+        }
+
+        private void Reports_Admin_Load(object sender, EventArgs e)
+        {
+            //Initially show carorderpanel and hide other panels
+            CarOrdersPanel.Visible = true;
+            CarPartOrdersPanel.Visible = false;
+            PaymentPanalView.Visible = false;
+
+            //Set defalt colors for buttons
+            btnCarOrdersPa.BackColor = Color.DarkGoldenrod;
+            btnCarPartOrdersPa.BackColor = Color.Goldenrod;
+            btnPaymentPa.BackColor = Color.Goldenrod;
+        }
+
+        private void btnCarPartOrdersPa_Click(object sender, EventArgs e)
+        {
+            //show carpartorders panel and hide others
+            CarOrdersPanel.Visible = false;
+            CarPartOrdersPanel.Visible = true;
+            PaymentPanalView.Visible = false;
+
+            //Change button colors
+            btnCarOrdersPa.BackColor = Color.Goldenrod;
+            btnCarPartOrdersPa.BackColor = Color.DarkGoldenrod;
+            btnPaymentPa.BackColor = Color.Goldenrod;
+        }
+
+        private void btnPaymentPa_Click(object sender, EventArgs e)
+        {
+            //show payment panel and hide others
+            CarOrdersPanel.Visible = false;
+            CarPartOrdersPanel.Visible = false;
+            PaymentPanalView.Visible = true;
+
+            //Change button colors
+            btnCarOrdersPa.BackColor = Color.Goldenrod;
+            btnCarPartOrdersPa.BackColor = Color.Goldenrod;
+            btnPaymentPa.BackColor = Color.DarkGoldenrod;
+        }
     }
 }
