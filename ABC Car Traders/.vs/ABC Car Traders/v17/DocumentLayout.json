@@ -3,15 +3,23 @@
   "WorkspaceRootPath": "D:\\ABC_Car_Traders\\ABC Car Traders\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C942FB21-F318-40B3-A1DE-735F816CE8DD}|ABC Car Traders\\ABC Car Traders.csproj|d:\\abc_car_traders\\abc car traders\\abc car traders\\orders_user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C942FB21-F318-40B3-A1DE-735F816CE8DD}|ABC Car Traders\\ABC Car Traders.csproj|solutionrelative:abc car traders\\orders_user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C942FB21-F318-40B3-A1DE-735F816CE8DD}|ABC Car Traders\\ABC Car Traders.csproj|d:\\abc_car_traders\\abc car traders\\abc car traders\\customer_management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C942FB21-F318-40B3-A1DE-735F816CE8DD}|ABC Car Traders\\ABC Car Traders.csproj|solutionrelative:abc car traders\\customer_management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C942FB21-F318-40B3-A1DE-735F816CE8DD}|ABC Car Traders\\ABC Car Traders.csproj|d:\\abc_car_traders\\abc car traders\\abc car traders\\reports_admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C942FB21-F318-40B3-A1DE-735F816CE8DD}|ABC Car Traders\\ABC Car Traders.csproj|solutionrelative:abc car traders\\reports_admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C942FB21-F318-40B3-A1DE-735F816CE8DD}|ABC Car Traders\\ABC Car Traders.csproj|d:\\abc_car_traders\\abc car traders\\abc car traders\\payment.rpt||{C0EF7560-990E-4D61-B970-65A6096B6866}",
+      "AbsoluteMoniker": "D:0:0:{C942FB21-F318-40B3-A1DE-735F816CE8DD}|ABC Car Traders\\ABC Car Traders.csproj|D:\\ABC_Car_Traders\\ABC Car Traders\\abc car traders\\payment.rpt||{C0EF7560-990E-4D61-B970-65A6096B6866}",
       "RelativeMoniker": "D:0:0:{C942FB21-F318-40B3-A1DE-735F816CE8DD}|ABC Car Traders\\ABC Car Traders.csproj|solutionrelative:abc car traders\\payment.rpt||{C0EF7560-990E-4D61-B970-65A6096B6866}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C942FB21-F318-40B3-A1DE-735F816CE8DD}|ABC Car Traders\\ABC Car Traders.csproj|d:\\abc_car_traders\\abc car traders\\abc car traders\\reports_admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C942FB21-F318-40B3-A1DE-735F816CE8DD}|ABC Car Traders\\ABC Car Traders.csproj|D:\\ABC_Car_Traders\\ABC Car Traders\\abc car traders\\reports_admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C942FB21-F318-40B3-A1DE-735F816CE8DD}|ABC Car Traders\\ABC Car Traders.csproj|solutionrelative:abc car traders\\reports_admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,19 +38,42 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Orders_User.cs [Design]",
+              "DocumentMoniker": "D:\\ABC_Car_Traders\\ABC Car Traders\\ABC Car Traders\\Orders_User.cs",
+              "RelativeDocumentMoniker": "ABC Car Traders\\Orders_User.cs",
+              "ToolTip": "D:\\ABC_Car_Traders\\ABC Car Traders\\ABC Car Traders\\Orders_User.cs [Design]",
+              "RelativeToolTip": "ABC Car Traders\\Orders_User.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T08:14:17.069Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Customer_Management.cs [Design]",
+              "DocumentMoniker": "D:\\ABC_Car_Traders\\ABC Car Traders\\ABC Car Traders\\Customer_Management.cs",
+              "RelativeDocumentMoniker": "ABC Car Traders\\Customer_Management.cs",
+              "ToolTip": "D:\\ABC_Car_Traders\\ABC Car Traders\\ABC Car Traders\\Customer_Management.cs [Design]",
+              "RelativeToolTip": "ABC Car Traders\\Customer_Management.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T08:14:09.06Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Payment.rpt",
               "DocumentMoniker": "D:\\ABC_Car_Traders\\ABC Car Traders\\ABC Car Traders\\Payment.rpt",
               "RelativeDocumentMoniker": "ABC Car Traders\\Payment.rpt",
               "ToolTip": "D:\\ABC_Car_Traders\\ABC Car Traders\\ABC Car Traders\\Payment.rpt",
               "RelativeToolTip": "ABC Car Traders\\Payment.rpt",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIdSURBVDhPpZJNaBNBFMf/M7ub2NhajSDiwS96CbY2BykojaD0oF5s0YPgQYReLHgpeNCLYv0AexNRb1VUAkJcPXgQEUG89BIaxI9gqzGxH6QmXTef3Wx2nJkmNev25g8ebx7z3n/ezBv8F4wx0lhK7j6fYo3lmowMhl35HoRA3XGk/YvYW\u002BsA2vCrUEIwu1hEJltwmeDc8V5Plx4BAaXEY4J7LxLSt4q4BBS6Eiq8oGm3nXHZ1VCkS9pgfxc62/0yT\u002BASaNRLIWE6ieHB3H1EZsMyVhUKTXU37Yo0RZFeVQiuL14D1tnooBtQcEwcSO9d7aoVdefw5yFC2GG\u002BDsa/OTj228LYwmXejYrkzxkUsqZMNG0TfZkexA99lHETUqlYJ0rV5YEPqfKOG7Glo3MGRSTkx2T4JNp2\u002BzGfmMf3JzNAHijHarJIfz\u002BN0wMh2QoduRrVL9x6NqrWzUt3hjfjYMiHV1NVWNHHCJAOoMof3OBOt10T8XD24kOiv0uynFFkp8ZTrPv8NNs3\u002BpXtifawUmWZWbU6q9l16Z\u002B\u002BTXrHOHHzDPP7ND6iNvSHAtjYrkLTNDzqfQleBIU/rDhdeI1Po4l7JpyqDSTSDoKdPmwLqqhaNdh2vbHrxXWhidcZ9mXBj3yJYr3Pwf7tBnL5HLZu2YRA4O/nERzp2yVrXQJiIhWrdsUwy92/lorZyURqLP4p/YZv/eBXLK9ktQL8AbhJ7xVosbKmAAAAAElFTkSuQmCC",
-              "WhenOpened": "2024-08-22T06:48:21.869Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-22T06:48:21.869Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Reports_Admin.cs",
               "DocumentMoniker": "D:\\ABC_Car_Traders\\ABC Car Traders\\ABC Car Traders\\Reports_Admin.cs",
               "RelativeDocumentMoniker": "ABC Car Traders\\Reports_Admin.cs",
@@ -55,7 +86,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Reports_Admin.cs [Design]",
               "DocumentMoniker": "D:\\ABC_Car_Traders\\ABC Car Traders\\ABC Car Traders\\Reports_Admin.cs",
               "RelativeDocumentMoniker": "ABC Car Traders\\Reports_Admin.cs",
