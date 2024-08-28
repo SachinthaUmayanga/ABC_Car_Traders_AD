@@ -33,7 +33,6 @@ namespace ABC_Car_Traders
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Car_User));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnCarPartOrder = new System.Windows.Forms.Button();
             this.btnOrders = new System.Windows.Forms.Button();
             this.btnCarPart = new System.Windows.Forms.Button();
             this.btnCar = new System.Windows.Forms.Button();
@@ -79,7 +78,6 @@ namespace ABC_Car_Traders
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Goldenrod;
-            this.panel2.Controls.Add(this.btnCarPartOrder);
             this.panel2.Controls.Add(this.btnOrders);
             this.panel2.Controls.Add(this.btnCarPart);
             this.panel2.Controls.Add(this.btnCar);
@@ -89,20 +87,6 @@ namespace ABC_Car_Traders
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(267, 750);
             this.panel2.TabIndex = 10;
-            // 
-            // btnCarPartOrder
-            // 
-            this.btnCarPartOrder.BackColor = System.Drawing.Color.Goldenrod;
-            this.btnCarPartOrder.FlatAppearance.BorderSize = 0;
-            this.btnCarPartOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCarPartOrder.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btnCarPartOrder.Location = new System.Drawing.Point(4, 548);
-            this.btnCarPartOrder.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnCarPartOrder.Name = "btnCarPartOrder";
-            this.btnCarPartOrder.Size = new System.Drawing.Size(261, 57);
-            this.btnCarPartOrder.TabIndex = 4;
-            this.btnCarPartOrder.Text = "Car Part Orders";
-            this.btnCarPartOrder.UseVisualStyleBackColor = false;
             // 
             // btnOrders
             // 
@@ -583,7 +567,6 @@ namespace ABC_Car_Traders
         #endregion
 
         private Panel panel2;
-        private Button btnCarPartOrder;
         private Button btnOrders;
         private Button btnCarPart;
         private Button btnCar;
