@@ -40,29 +40,23 @@ namespace ABC_Car_Traders
             this.btnCustomers = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.PaymentPanel = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.CarOrdersPanel = new System.Windows.Forms.Panel();
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.CarOrders1 = new ABC_Car_Traders.CarOrders();
             this.btnCarOrdersPa = new System.Windows.Forms.Button();
             this.btnCarPartOrdersPa = new System.Windows.Forms.Button();
             this.btnPaymentPa = new System.Windows.Forms.Button();
-            this.CarPartOrdersPanel = new System.Windows.Forms.Panel();
-            this.crystalReportViewer2 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.cRCarOrders = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.CarOrders1 = new ABC_Car_Traders.CarOrders();
+            this.crCarPartOrders = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.CarPartOrders1 = new ABC_Car_Traders.CarPartOrders();
-            this.PaymentPanel = new System.Windows.Forms.Panel();
-            this.PaymentPanalView = new System.Windows.Forms.Panel();
-            this.crystalReportViewer3 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.crPayment = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.Payment1 = new ABC_Car_Traders.Payment();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.CarOrdersPanel.SuspendLayout();
-            this.CarPartOrdersPanel.SuspendLayout();
-            this.PaymentPanalView.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnReports
@@ -179,6 +173,13 @@ namespace ABC_Car_Traders
             this.panel2.Size = new System.Drawing.Size(267, 750);
             this.panel2.TabIndex = 153;
             // 
+            // PaymentPanel
+            // 
+            this.PaymentPanel.Location = new System.Drawing.Point(270, 38);
+            this.PaymentPanel.Name = "PaymentPanel";
+            this.PaymentPanel.Size = new System.Drawing.Size(915, 707);
+            this.PaymentPanel.TabIndex = 1;
+            // 
             // btnHome
             // 
             this.btnHome.BackgroundImage = global::ABC_Car_Traders.Properties.Resources.home_button;
@@ -241,26 +242,6 @@ namespace ABC_Car_Traders
             this.label2.TabIndex = 1;
             this.label2.Text = "ADMIN - REPORTS";
             // 
-            // CarOrdersPanel
-            // 
-            this.CarOrdersPanel.Controls.Add(this.crystalReportViewer1);
-            this.CarOrdersPanel.Location = new System.Drawing.Point(269, 78);
-            this.CarOrdersPanel.Name = "CarOrdersPanel";
-            this.CarOrdersPanel.Size = new System.Drawing.Size(913, 707);
-            this.CarOrdersPanel.TabIndex = 155;
-            // 
-            // crystalReportViewer1
-            // 
-            this.crystalReportViewer1.ActiveViewIndex = 0;
-            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.CarOrders1;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(913, 707);
-            this.crystalReportViewer1.TabIndex = 0;
-            // 
             // btnCarOrdersPa
             // 
             this.btnCarOrdersPa.BackColor = System.Drawing.Color.Goldenrod;
@@ -306,53 +287,38 @@ namespace ABC_Car_Traders
             this.btnPaymentPa.UseVisualStyleBackColor = false;
             this.btnPaymentPa.Click += new System.EventHandler(this.btnPaymentPa_Click);
             // 
-            // CarPartOrdersPanel
+            // cRCarOrders
             // 
-            this.CarPartOrdersPanel.Controls.Add(this.PaymentPanalView);
-            this.CarPartOrdersPanel.Controls.Add(this.crystalReportViewer2);
-            this.CarPartOrdersPanel.Location = new System.Drawing.Point(269, 78);
-            this.CarPartOrdersPanel.Name = "CarPartOrdersPanel";
-            this.CarPartOrdersPanel.Size = new System.Drawing.Size(915, 704);
-            this.CarPartOrdersPanel.TabIndex = 1;
+            this.cRCarOrders.ActiveViewIndex = 0;
+            this.cRCarOrders.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cRCarOrders.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cRCarOrders.Location = new System.Drawing.Point(269, 90);
+            this.cRCarOrders.Name = "cRCarOrders";
+            this.cRCarOrders.ReportSource = this.CarOrders1;
+            this.cRCarOrders.Size = new System.Drawing.Size(912, 695);
+            this.cRCarOrders.TabIndex = 158;
             // 
-            // crystalReportViewer2
+            // crCarPartOrders
             // 
-            this.crystalReportViewer2.ActiveViewIndex = 0;
-            this.crystalReportViewer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer2.Location = new System.Drawing.Point(0, 0);
-            this.crystalReportViewer2.Name = "crystalReportViewer2";
-            this.crystalReportViewer2.ReportSource = this.CarPartOrders1;
-            this.crystalReportViewer2.Size = new System.Drawing.Size(915, 704);
-            this.crystalReportViewer2.TabIndex = 0;
+            this.crCarPartOrders.ActiveViewIndex = 0;
+            this.crCarPartOrders.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crCarPartOrders.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crCarPartOrders.Location = new System.Drawing.Point(269, 90);
+            this.crCarPartOrders.Name = "crCarPartOrders";
+            this.crCarPartOrders.ReportSource = this.CarPartOrders1;
+            this.crCarPartOrders.Size = new System.Drawing.Size(912, 695);
+            this.crCarPartOrders.TabIndex = 159;
             // 
-            // PaymentPanel
+            // crPayment
             // 
-            this.PaymentPanel.Location = new System.Drawing.Point(270, 38);
-            this.PaymentPanel.Name = "PaymentPanel";
-            this.PaymentPanel.Size = new System.Drawing.Size(915, 707);
-            this.PaymentPanel.TabIndex = 1;
-            // 
-            // PaymentPanalView
-            // 
-            this.PaymentPanalView.Controls.Add(this.crystalReportViewer3);
-            this.PaymentPanalView.Location = new System.Drawing.Point(0, 1);
-            this.PaymentPanalView.Name = "PaymentPanalView";
-            this.PaymentPanalView.Size = new System.Drawing.Size(915, 706);
-            this.PaymentPanalView.TabIndex = 26;
-            // 
-            // crystalReportViewer3
-            // 
-            this.crystalReportViewer3.ActiveViewIndex = 0;
-            this.crystalReportViewer3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer3.Location = new System.Drawing.Point(0, 0);
-            this.crystalReportViewer3.Name = "crystalReportViewer3";
-            this.crystalReportViewer3.ReportSource = this.Payment1;
-            this.crystalReportViewer3.Size = new System.Drawing.Size(915, 706);
-            this.crystalReportViewer3.TabIndex = 0;
+            this.crPayment.ActiveViewIndex = 0;
+            this.crPayment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crPayment.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crPayment.Location = new System.Drawing.Point(269, 90);
+            this.crPayment.Name = "crPayment";
+            this.crPayment.ReportSource = this.Payment1;
+            this.crPayment.Size = new System.Drawing.Size(912, 700);
+            this.crPayment.TabIndex = 160;
             // 
             // Reports_Admin
             // 
@@ -360,11 +326,12 @@ namespace ABC_Car_Traders
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1183, 788);
-            this.Controls.Add(this.CarPartOrdersPanel);
+            this.Controls.Add(this.crPayment);
+            this.Controls.Add(this.crCarPartOrders);
+            this.Controls.Add(this.cRCarOrders);
             this.Controls.Add(this.btnPaymentPa);
             this.Controls.Add(this.btnCarPartOrdersPa);
             this.Controls.Add(this.btnCarOrdersPa);
-            this.Controls.Add(this.CarOrdersPanel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -378,9 +345,6 @@ namespace ABC_Car_Traders
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.CarOrdersPanel.ResumeLayout(false);
-            this.CarPartOrdersPanel.ResumeLayout(false);
-            this.PaymentPanalView.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -399,18 +363,15 @@ namespace ABC_Car_Traders
         private Button btnExit;
         private Panel panel1;
         private Label label2;
-        private Panel CarOrdersPanel;
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private CarOrders CarOrders1;
         private Button btnCarOrdersPa;
         private Button btnCarPartOrdersPa;
         private Button btnPaymentPa;
-        private Panel CarPartOrdersPanel;
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer2;
-        private CarPartOrders CarPartOrders1;
         private Panel PaymentPanel;
-        private Panel PaymentPanalView;
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer3;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer cRCarOrders;
+        private CarOrders CarOrders1;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crCarPartOrders;
+        private CarPartOrders CarPartOrders1;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crPayment;
         private Payment Payment1;
     }
 }
