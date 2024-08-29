@@ -240,12 +240,15 @@ namespace ABC_Car_Traders
             SaveCar(carID, brand, model, manufactureYear, transmission, color, licensePlateNo, fuelType, price, notes, CarPicBytes);
         }
 
-        private void SaveCar(string carID, string brand, string model, string manufactureYear, string transmission, string color, string licensePlateNo, string fuelType, string price, string notes, byte[] CarPicture)
+        private void SaveCar(string carID, string brand, string model, string manufactureYear, string transmission, string color, 
+            string licensePlateNo, string fuelType, string price, string notes, byte[] CarPicture)
         {
             try
             {
-                var query = @"INSERT INTO Cars (CarID, CarBrand, CarModel, ManufacturingYear, Transmission, CarColor, LicensePlateNumber, FuelType, Price, Notes, Picture, SavedDate, Status)
-                                VALUES (@CarID, @CarBrand, @CarModel, @ManufacturingYear, @Transmission, @CarColor, @LicensePlateNumber, @FuelType, @Price, @Notes, @Picture, @SavedDate, @Status)";
+                var query = @"INSERT INTO Cars (CarID, CarBrand, CarModel, ManufacturingYear, Transmission, CarColor, LicensePlateNumber, 
+                                FuelType, Price, Notes, Picture, SavedDate, Status)
+                                VALUES (@CarID, @CarBrand, @CarModel, @ManufacturingYear, @Transmission, @CarColor, @LicensePlateNumber, 
+                                @FuelType, @Price, @Notes, @Picture, @SavedDate, @Status)";
 
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
@@ -368,11 +371,14 @@ namespace ABC_Car_Traders
             UpdateCar(carID, brand, model, manufactureYear, transmission, color, licensePlateNo, fuelType, price, notes, CarPicBytes);
         }
 
-        private void UpdateCar(string carID, string brand, string model, string manufactureYear, string transmission, string color, string licensePlateNo, string fuelType, string price, string notes, byte[] CarPicture)
+        private void UpdateCar(string carID, string brand, string model, string manufactureYear, string transmission, string color, 
+            string licensePlateNo, string fuelType, string price, string notes, byte[] CarPicture)
         {
             try
             {
-                var query = "UPDATE Cars SET CarBrand=@CarBrand, CarModel=@CarModel, ManufacturingYear=@ManufacturingYear, Transmission=@Transmission, CarColor=@CarColor, LicensePlateNumber=@LicensePlateNumber, FuelType=@FuelType, Price=@Price, Notes=@Notes, Picture=@Picture WHERE CarID=@CarID";
+                var query = @"UPDATE Cars SET CarBrand=@CarBrand, CarModel=@CarModel, ManufacturingYear=@ManufacturingYear, 
+                            Transmission=@Transmission, CarColor=@CarColor, LicensePlateNumber=@LicensePlateNumber, FuelType=@FuelType, 
+                            Price=@Price, Notes=@Notes, Picture=@Picture WHERE CarID=@CarID";
 
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
