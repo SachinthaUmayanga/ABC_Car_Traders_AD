@@ -199,7 +199,8 @@ namespace ABC_Car_Traders
         {
             try
             {
-                var query = "SELECT * FROM CarParts WHERE PartID LIKE @SearchQuery OR PartName LIKE @SearchQuery OR PartNumber LIKE @SearchQuery OR CompatibleCars LIKE @SearchQuery";
+                var query = @"SELECT * FROM CarParts WHERE PartID LIKE @SearchQuery OR PartName LIKE @SearchQuery OR PartNumber LIKE @SearchQuery 
+                            OR CompatibleCars LIKE @SearchQuery";
 
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
@@ -295,7 +296,10 @@ namespace ABC_Car_Traders
                             byte[] imageBytes = ImageToByteArray(pbCarPart.Image);
 
                             //Insert order details into the CarpartOrders table
-                            string insertQuery = "INSERT INTO CarPartOrders (PartID, username, PartName, PartNumber, ManufacturingYear, CompatibleCars, Picture, OrderdQuantity, UnitPrice, TotalPrice, OrderStatus, OrderDate, Payment) VALUES (@PartID, @username, @PartName, @PartNumber, @ManufacturingYear, @CompatibleCars, @Picture, @OrderdQuantity, @UnitPrice, @TotalPrice, @OrderStatus, @OrderDate, @Payment)";
+                            string insertQuery = @"INSERT INTO CarPartOrders (PartID, username, PartName, PartNumber, ManufacturingYear, CompatibleCars, Picture, 
+                                                    OrderdQuantity, UnitPrice, TotalPrice, OrderStatus, OrderDate, Payment) 
+                                                    VALUES (@PartID, @username, @PartName, @PartNumber, @ManufacturingYear, @CompatibleCars, @Picture, @OrderdQuantity, 
+                                                    @UnitPrice, @TotalPrice, @OrderStatus, @OrderDate, @Payment)";
                             using (SqlCommand cmd = new SqlCommand(insertQuery, conn))
                             {
                                 cmd.Parameters.AddWithValue("@PartID", lblPartID.Text);
