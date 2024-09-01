@@ -66,6 +66,7 @@ namespace ABC_Car_Traders
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnPay = new System.Windows.Forms.Button();
+            this.lblID = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.carOrdersDGV)).BeginInit();
@@ -419,6 +420,7 @@ namespace ABC_Car_Traders
             this.btnDelete.TabIndex = 163;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClear
             // 
@@ -448,12 +450,21 @@ namespace ABC_Car_Traders
             this.btnPay.UseVisualStyleBackColor = false;
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(311, 576);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(0, 15);
+            this.lblID.TabIndex = 166;
+            // 
             // Orders_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1183, 786);
+            this.Controls.Add(this.lblID);
             this.Controls.Add(this.btnPay);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnDelete);
@@ -532,5 +543,6 @@ namespace ABC_Car_Traders
         private Button btnDelete;
         private Button btnClear;
         private Button btnPay;
+        private Label lblID;
     }
 }

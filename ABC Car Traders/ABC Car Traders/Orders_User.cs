@@ -340,10 +340,12 @@ namespace ABC_Car_Traders
             lblQuantity.Visible = false;
             lblQuantityDis.Visible = false;
             lblCarModelDis.Visible = true;
+            lblID.Visible = false;
 
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = carOrdersDGV.Rows[e.RowIndex];
+                lblID.Text = row.Cells["CarOrderID"].Value.ToString();
                 lblUsername.Text = row.Cells["username"].Value.ToString();
                 lblPatNameOrCarModel.Text = row.Cells["CarModel"].Value.ToString();
                 lblPrice.Text = row.Cells["Price"].Value.ToString();
@@ -358,10 +360,12 @@ namespace ABC_Car_Traders
             lblPartNameDis.Visible = true;
             lblQuantity.Visible = true;
             lblQuantityDis.Visible = true;
+            lblID.Visible = false;
 
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = carPartOrdersDGV.Rows[e.RowIndex];
+                lblID.Text = row.Cells["PartOrderID"].Value.ToString();
                 lblUsername.Text = row.Cells["username"].Value.ToString();
                 lblPatNameOrCarModel.Text = row.Cells["PartName"].Value.ToString();
                 lblPrice.Text = row.Cells["TotalPrice"].Value.ToString();
@@ -447,6 +451,78 @@ namespace ABC_Car_Traders
             else
             {
                 MessageBox.Show("There are no pending orders to pay for.", "No Orders", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = 0;
+
+                if (int.TryParse(lblID.Text, out id))
+                {
+                    if (carOrdersDGV.SelectedRows.Count > 0)
+                    {
+                        // Use lblID to get CarOrderID
+                        int carOrderID = id;
+
+                        string deleteCarOrderQuery = "UPDATE CarOrders SET DeletedDate = @DeletedDate WHERE CarOrderID = @CarOrderID";
+
+                        using (SqlConnection conn = new SqlConnection(connectionString))
+                        {
+                            SqlCommand cmd = new SqlCommand(deleteCarOrderQuery, conn);
+                            cmd.Parameters.AddWithValue("@DeletedDate", DateTime.Now);
+                            cmd.Parameters.AddWithValue("@CarOrderID", carOrderID);
+
+                            conn.Open();
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+
+                            MessageBox.Show("Car order deleted successfully.", "Delete Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            // Refresh the data grid view after deletion
+                            GetCarOrders(_username);
+                            ClalculateAndDisplayTotalPrice(_username);
+                        }
+                    }
+                    else if (carPartOrdersDGV.SelectedRows.Count > 0)
+                    {
+                        // Use lblID to get PartOrderID
+                        int partOrderID = id;
+
+                        string deleteCarPartOrderQuery = "UPDATE CarPartOrders SET DeletedDate = @DeletedDate WHERE PartOrderID = @PartOrderID";
+
+                        using (SqlConnection conn = new SqlConnection(connectionString))
+                        {
+                            SqlCommand cmd = new SqlCommand(deleteCarPartOrderQuery, conn);
+                            cmd.Parameters.AddWithValue("@DeletedDate", DateTime.Now);
+                            cmd.Parameters.AddWithValue("@PartOrderID", partOrderID);
+
+                            conn.Open();
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+
+                            MessageBox.Show("Car part order deleted successfully.", "Delete Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            // Refresh the data grid view after deletion
+                            GetCarPartOrders(_username);
+                            ClalculateAndDisplayTotalPrice(_username);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please select an order to delete.", "Delete Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Invalid ID. Please ensure the ID is correct.", "Delete Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

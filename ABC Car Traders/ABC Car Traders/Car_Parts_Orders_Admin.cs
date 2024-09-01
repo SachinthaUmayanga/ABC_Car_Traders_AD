@@ -283,7 +283,7 @@ namespace ABC_Car_Traders
         {
             if (string.IsNullOrEmpty(lblPartID.Text))
             {
-                MessageBox.Show("Please selact an order to delete.");
+                MessageBox.Show("Please select an order to delete.");
                 return;
             }
 
@@ -294,31 +294,34 @@ namespace ABC_Car_Traders
                 {
                     int orderdQuantity = GetOrderedQuantity(lblOrderID.Text);
 
-                    //Check if ordered quantity was retrived successfully
+                    // Check if ordered quantity was retrieved successfully
                     if (orderdQuantity > 0)
                     {
                         using (SqlConnection conn = new SqlConnection(connectionString))
                         {
-                            //Update CarPartOrders to set DeletedDate
-                            string deleteQuery = "UPDATE CarPartOrders SET DeletedDate = @DeletedDate WHERE PartOrderID = @PartOrderID";
+                            conn.Open();
+
+                            // Update CarPartOrders to set DeletedDate and change order status to "Cancelled"
+                            string deleteQuery = "UPDATE CarPartOrders SET DeletedDate = @DeletedDate, OrderStatus = @OrderStatus WHERE PartOrderID = @PartOrderID";
                             SqlCommand deleteCmd = new SqlCommand(deleteQuery, conn);
                             deleteCmd.Parameters.AddWithValue("@DeletedDate", DateTime.Now);
+                            deleteCmd.Parameters.AddWithValue("@OrderStatus", "Cancelled");
                             deleteCmd.Parameters.AddWithValue("@PartOrderID", lblOrderID.Text);
 
-                            conn.Open();
                             deleteCmd.ExecuteNonQuery();
 
-                            //Update CarParts to restore quantity
+                            // Update CarParts to restore quantity
                             string updateQuery = "UPDATE CarParts SET Quantity = Quantity + @OrderdQuantity WHERE PartID = @PartID";
                             SqlCommand updateCmd = new SqlCommand(updateQuery, conn);
                             updateCmd.Parameters.AddWithValue("@OrderdQuantity", orderdQuantity);
                             updateCmd.Parameters.AddWithValue("@PartID", lblPartID.Text);
 
                             updateCmd.ExecuteNonQuery();
+
                             conn.Close();
                         }
 
-                        MessageBox.Show("Order Delete successfully!");
+                        MessageBox.Show("Order deleted successfully and status updated to Cancelled!");
                         ClearForm();
                     }
                     else
