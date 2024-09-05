@@ -171,5 +171,10 @@ namespace ABC_Car_Traders
             cmbType.SelectedIndex = 0;
             txtName.Focus();
         }
+
+        private void Signup_Load(object sender, EventArgs e)
+        {
+            cmbType.SelectedIndex = 0;
+        }
     }
 }

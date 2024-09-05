@@ -364,6 +364,7 @@ namespace ABC_Car_Traders
             this.Name = "Signup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sign up";
+            this.Load += new System.EventHandler(this.Signup_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbProfile)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
